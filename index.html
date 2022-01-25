@@ -7,6 +7,8 @@
     <title>JUST 쇼핑몰</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="script/jquery-1.12.4.min.js"></script>
+
 </head>
 <body>
     <div id="modal">
@@ -14,7 +16,7 @@
         <p>제공된 텍스트를 넣고 닫기 버튼을 만든다.</p>
         <p>제공된 텍스트를 넣고 닫기 버튼을 만든다.</p>
         <p>제공된 텍스트를 넣고 닫기 버튼을 만든다.123123</p>        
-        <button> <span>&times;닫기</span> </button>
+        <button id="btn_close"> <span>&times;닫기</span> </button>
     </div>
 
 
@@ -44,26 +46,26 @@
                     </li>
                     <li><a href="#">아우터</a>
                         <ul class="lnb">
-                            <li>자켓</li>
-                            <li>코트</li>
-                            <li>가디건</li>
-                            <li>머플러</li>
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">코트</a></li>
+                            <li><a href="#">가디건</a></li>
+                            <li><a href="#">머플러</a></li>
                         </ul>
                     </li>
                     <li><a href="#">팬츠</a>
                         <ul class="lnb">
-                            <li>청바지</li>
-                            <li>짧은바지</li>
-                            <li>긴바지</li>
-                            <li>레깅스</li>
+                            <li><a href="#">청바지</a></li>
+                            <li><a href="#">짧은바지</a></li>
+                            <li><a href="#">긴바</a>지</li>
+                            <li><a href="#">레깅스</a></li>
                         </ul>
                     </li>
                     <li><a href="#">악세사리</a>
                         <ul class="lnb">
-                            <li>귀고리</li>
-                            <li>목걸이</li>
-                            <li>반지</li>
-                            <li>팔찌</li>
+                            <li><a href="#">귀고리</a></li>
+                            <li><a href="#">목걸이</a></li>
+                            <li><a href="#">반지</a></li>
+                            <li><a href="#">팔찌</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -71,20 +73,22 @@
         </div>
         <!-- /.header -->
         <div class="slide">
-            <div>
-                <h2>슬라이드1</h2>
-                <p>슬라이드1 내용</p>
-                <img src="https://picsum.photos/id/45/1200/300" alt="슬라이드1">
-            </div>
-            <div>
-                <h2>슬라이드2</h2>
-                <p>슬라이드2 내용</p>
-                <img src="https://picsum.photos/id/29/1200/300" alt="슬라이드2">
-            </div>
-            <div>
-                <h2>슬라이드3</h2>
-                <p>슬라이드3 내용</p>
-                <img src="https://picsum.photos/id/22/1200/300" alt="슬라이드3">
+            <div id="imgs">
+                <div>
+                    <h2>슬라이드1</h2>
+                    <p>슬라이드1 내용입니다.</p>
+                    <img src="https://picsum.photos/id/45/1200/300" alt="슬라이드1">
+                </div>
+                <div>
+                    <h2>슬라이드2</h2>
+                    <p>슬라이드2 내용입니다.</p>
+                    <img src="https://picsum.photos/id/29/1200/300" alt="슬라이드2">
+                </div>
+                <div>
+                    <h2>슬라이드3</h2>
+                    <p>슬라이드3 내용입니다.</p>
+                    <img src="https://picsum.photos/id/22/1200/300" alt="슬라이드3">
+                </div>
             </div>
         </div>
 
@@ -105,22 +109,25 @@
         <div class="contents">
             <div class="tab">
                 <ul class="tabMenu">
-                    <li class="on"><a href="#">공지사항</a></li>
-                    <li><a href="#">갤러리</a></li>
+                    <li>
+                        <a href="#" id="news_title" class="active">공지사항</a>
+                    </li>
+                    <li><a href="#" id="gallery_title">갤러리</a></li>
                 </ul>
                 
                 <div class="tabItem">
-                    <ul class="notice on">
-                        <li><a href="#">공지사항내용공지사항내용공지사항내용공지사항내용공지사항내용</a><span>공지사항날짜</span></li>
-                        <li><a href="#">공지사항내용공지사항내용공지사항내용공지사항내용공지사항내용</a><span>공지사항날짜</span></li>
-                        <li><a href="#">공지사항내용공지사항내용공지사항내용공지사항내용공지사항내용</a><span>공지사항날짜</span></li>
-                        <li><a href="#">공지사항내용공지사항내용공지사항내용공지사항내용공지사항내용</a><span>공지사항날짜</span></li>
+                    <ul class="notice">
+                        <li><a href="#">공지사항내용공지사항내용공지사항내용공지사항내용공지사항내용</a><span>22.01.01</span></li>
+                        <li><a href="#">공지사항내용공지사항내용공지사항내용공지사항내용공지사항내용</a><span>22.01.03</span></li>
+                        <li><a href="#">공지사항내용공지사항내용공지사항내용공지사항내용공지사항내용</a><span>22.01.04</span></li>
+                        <li><a href="#">공지사항내용공지사항내용공지사항내용공지사항내용공지사항내용</a><span>22.01.05</span></li>
                     </ul>
 
                     <ul class="gallery">
-                      <li><a href="#"><img src="images/gallery01.png" alt="갤러리이미지1"></a></li>
-                      <li><a href="#"><img src="images/gallery02.png" alt="갤러리이미지2"></a></li>
-                      <li><a href="#"><img src="images/gallery03.png" alt="갤러리이미지3"></a></li>
+                      <li><a href="#"><img src="https://picsum.photos/id/78/100/100" alt="갤러리이미지1"></a></li>
+                      <li><a href="#"><img src="https://picsum.photos/id/79/100/100" alt="갤러리이미지2"></a></li>
+                      <li><a href="#"><img src="https://picsum.photos/id/98/100/100" alt="갤러리이미지3"></a></li>
+                  
                     </ul>
                 </div>
             </div>
@@ -179,6 +186,7 @@
         <!-- /.footer -->
     </div>
 
+    
     <script src="script/main.js"></script>
 
 
