@@ -18,7 +18,50 @@ body{
     color: #333333;
     background-color: #ffffff;
 }
-
+.change{
+    right:  0 !important;
+}
+.rotate{
+    transform: rotate(180deg)
+}
+#sidebar{
+    transition: right 0.3s;
+    width: 400px;
+    position: fixed;
+    height: 100%;
+    right: -350px;
+    top: 0;
+    background: white;
+    border-left: 1px solid black;
+    box-sizing: border-box;
+    z-index: 5000;
+}
+.onoff{
+    background: rgba(0,0,0,.7);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 4999;
+}
+#sidebar button{
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    right: 380px;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 1px solid black;
+}
+#sidebar button span{
+    transition: all 0.3s;
+}
+#sidebar.change button span{
+    transition: all 0.5s;    
+    transform: rotate(180deg);
+}
 
 #modal{
     display: none;
@@ -192,6 +235,7 @@ body{
     display: flex;
     border-bottom: #000 1px solid;
     line-height: 2;
+    margin-left: 10px;
 }
 
 .notice li a{
@@ -210,6 +254,7 @@ body{
 }
 .gallery{
     display: none;
+    background: rgb(224, 224, 224);
 }
 .gallery li{
     display: inline-block;
@@ -222,15 +267,22 @@ body{
     width:110px;
 }
 
-
+.banner{
+    display: flex;
+    align-items: center;
+}
 .banner img{
     box-sizing: border-box;
 }
 .shortcut{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 400px;
+}
+.shortcut img{
+    width: 70px;
+    height: 70px;
 }
 
 
@@ -246,7 +298,7 @@ body{
     height: 100px;
     display: flex;
     justify-content: space-between;
-    background: gray;
+    background: rgb(209, 209, 209);
     align-items: center;
 }
 .footer div{
@@ -262,14 +314,11 @@ body{
 .logo{
     width: 200px;
     height: 40px;
-    background: green;
 }
 .copyright{
     width: 800px;
     margin: 0 25px;
-    background: yellow;
 }
 .sns{
     width:200px;
-    background: red;
 }
